@@ -11,6 +11,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.plantdiseasedetectionapp.secrets.API_KEY_GEMINI
 import com.google.ai.client.generativeai.GenerativeModel
 import com.google.ai.client.generativeai.type.content
 import com.google.firebase.auth.FirebaseAuth
@@ -88,7 +89,7 @@ class AuthViewModel : ViewModel() {
 
     val generativeModel : GenerativeModel = GenerativeModel(
         modelName = "gemini-1.5-flash-001",
-        apiKey = "AIzaSyDCsYUana8weqspfXrn9_jhwpiddNMc6Xw"
+        apiKey = API_KEY_GEMINI
     )
 
     fun getImage(bitImage: Bitmap){
